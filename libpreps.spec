@@ -2,7 +2,7 @@ Summary:	libPRepS is the PRepS client/server library
 Summary(pl):	libPRepS to biblioteka dla klienta/serwera PRepS
 Name:		libpreps
 Version:	1.6.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://webpages.charter.net/stuffle/linux/preps/%{name}-%{version}.tar.gz
