@@ -1,0 +1,27 @@
+diff -Nur preps-1.6.5.orig/scripts/create_prepsdb.in preps-1.6.5/scripts/create_prepsdb.in
+--- preps-1.6.5.orig/scripts/create_prepsdb.in	Sat Oct 14 04:30:19 2000
++++ preps-1.6.5/scripts/create_prepsdb.in	Sun Jan 21 15:18:32 2001
+@@ -1,4 +1,4 @@
+-#! /bin/sh
++#! /bin/bash
+ # create_prepsdb -- Create a new PRepS database
+ # Copyright (c) 1999, Kenneth W. Sodemann (stufflehead@bigfoot.com)
+ #
+diff -Nur preps-1.6.5.orig/scripts/update_prepsdb.in preps-1.6.5/scripts/update_prepsdb.in
+--- preps-1.6.5.orig/scripts/update_prepsdb.in	Sat Oct 14 04:30:21 2000
++++ preps-1.6.5/scripts/update_prepsdb.in	Sun Jan 21 15:18:40 2001
+@@ -1,4 +1,4 @@
+-#! /bin/sh
++#! /bin/bash
+ # update_prepsdb -- Update a PRepS database
+ # Copyright (c) 2000 Kenneth W. Sodemann (stufflehead@bigfoot.com)
+ #
+diff -Nur preps-1.6.5.orig/scripts/create_schema.in preps-1.6.5/scripts/create_schema.in
+--- preps-1.6.5.orig/scripts/create_schema.in  Wed Nov 28 21:40:21 2001
++++ preps-1.6.5/scripts/create_schema.in       Sun Jan 27 02:18:40 2002
+@@ -1,4 +1,4 @@
+-#! /bin/sh
++#! /bin/bash
+ #----------------------------------------------------------------------------
+ # create_schema
+ #
