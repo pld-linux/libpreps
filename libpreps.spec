@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://webpages.charter.net/stuffle/linux/preps/%{name}-%{version}.tar.gz
+# Source0-md5:	4b0333f7b101c0e8779724d18cb5ff0d
 Patch0:		%{name}-postgresql_include_path.patch
 Patch1:		%{name}-nostatic.patch
 Patch2:		%{name}-plpgsql_include_path.patch
