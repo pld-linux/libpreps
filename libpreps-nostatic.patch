@@ -1,0 +1,15 @@
+--- libpreps-1.6.5/configure.in.orig	Sun Jan 27 01:18:42 2002
++++ libpreps-1.6.5/configure.in	Sun Jan 27 01:20:05 2002
+@@ -68,9 +68,9 @@
+ PG_CFLAGS="-I$pgsql_incdir"
+ 
+ pgsql_libdirs="$ac_pgsql_dir/lib /usr/lib/pgsql /usr/lib /usr/local/lib /opt/postgres/lib"
+-AC_FIND_FILE(libpq.a, $pgsql_libdirs, pgsql_libdir)
+-if test ! -r $pgsql_libdir/libpq.a; then
+-  AC_MSG_ERROR(libpq.a not found.  May need to use --with-pgsqldir option)
++AC_FIND_FILE(libpq.so, $pgsql_libdirs, pgsql_libdir)
++if test ! -r $pgsql_libdir/libpq.so; then
++  AC_MSG_ERROR(libpq.so not found.  May need to use --with-pgsqldir option)
+ fi                                                                              
+ PG_LIBS="-L$pgsql_libdir -lpq -lcrypt"
+ 
