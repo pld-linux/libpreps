@@ -21,18 +21,17 @@ Patch4:		%{name}-shell.patch
 URL:		http://webpages.charter.net/stuffle/linux/preps/preps.html
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:  glib-devel >= 1.2.0
+BuildRequires:	postgresql-backend-devel
 BuildRequires:	postgresql-devel >= 7.0
 BuildRequires:	postgresql-module-plpgsql
-BuildRequires:	postgresql-backend-devel
 BuildRequires:  tetex-dvips
-BuildRequires:  glib-devel >= 1.2.0
 # Requires:	postgresql-clients
 Requires:       postgresql-module-plpgsql >= 7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
-PRepS is a simple Problem Reporting System. PRepS is designed around
+RepS is a simple Problem Reporting System. PRepS is designed around
 the bug tracking needs of small to medium sized software projects.
 However, PRepS may be flexible enough to be used for other types of
 problem or status tracking. For example, PRepS could be setup to track
@@ -43,7 +42,6 @@ and update PRepS databases. It also contains libpreps. libpreps is a
 library that contains routines used by the server, as well as some
 routines common to the user interface. For that reason, it is needed
 for both the server and the client.
-
 
 %description -l pl
 PRepS s³u¿y do kontroli i zarz±dzania b³êdami. PRepS zosta³
@@ -57,7 +55,6 @@ baz danych dla serwera. Zawiera te¿ bibliotekê libpreps, zawieraj±c±
 procedury wykorzystywane przez serwer oraz niektóre procedury wspólne
 z interfejsem u¿ytkownika. Z tego powodu jest ona wymagana zarówno
 przez serwer, jak i przez klientów.
-
 
 %package devel
 Summary:        Header files for libPRepS
@@ -99,7 +96,6 @@ libPRepS static version.
 %description static -l pl
 Statyczna wersja biblioteki libPRepS.
 
-
 %prep
 %setup -q
 %patch0 -p1
@@ -109,10 +105,10 @@ Statyczna wersja biblioteki libPRepS.
 %patch4 -p1
 
 %build
+rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
-rm -f missing
 automake -a -c
 %configure
 %{__make} 
