@@ -1,12 +1,11 @@
-diff -uNr libpreps-1.6.5.orig/configure.in libpreps-1.6.5/configure.in
---- libpreps-1.6.5.orig/configure.in	Wed May  8 09:24:00 2002
-+++ libpreps-1.6.5/configure.in	Wed May  8 09:28:32 2002
-@@ -65,7 +65,7 @@
- if test ! -r $pgsql_incdir/libpq-fe.h; then
-   AC_MSG_ERROR(libpq-fe.h not found.  May need to use --with-pgsqldir option)
- fi                                                                              
--PG_CFLAGS="-I$pgsql_incdir"
-+PG_CFLAGS="-I$pgsql_incdir -I$pgsql_incdir/postgresql/server"
- 
- pgsql_libdirs="$ac_pgsql_dir/lib /usr/lib/pgsql /usr/lib /usr/local/lib /opt/postgres/lib"
- AC_FIND_FILE(libpq.so, $pgsql_libdirs, pgsql_libdir)
+--- libpreps-1.9.0/configure.in.orig	2004-04-06 23:07:44.000000000 +0200
++++ libpreps-1.9.0/configure.in	2004-04-06 23:13:52.449643424 +0200
+@@ -150,7 +150,7 @@
+          [Define if the PostgreSQL server headers are in their own directory.])
+    fi
+    AC_MSG_RESULT(yes)
+-   PG_CFLAGS="-I$pgserv_incdir $PG_CFLAGS"
++   PG_CFLAGS="-I$pgserv_incdir -I$pgserv_incdir/server $PG_CFLAGS"
+ else
+    AC_DEFINE(PG_SERVER_DIRECTORY, 1,
+       [Define if the PostgreSQL server headers are in their own directory.])
