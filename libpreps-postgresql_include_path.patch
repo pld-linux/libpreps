@@ -5,7 +5,7 @@
  )                                                                               
  
 -pgsql_incdirs="$ac_pgsql_dir/include /usr/include/pgsql /usr/include/postgresql /usr/include /usr/local/include /opt/postgres/include"
-+pgsql_incdirs="$ac_pgsql_dir/include /usr/include/pgsql /usr/include/postgresql /usr/include/postgresql /usr/include /usr/local/include /opt/postgres/include"
++pgsql_incdirs="$ac_pgsql_dir/include /usr/include/pgsql /usr/include/postgresql /usr/include/postgresql/server /usr/include /usr/local/include /opt/postgres/include"
  AC_FIND_FILE(libpq-fe.h, $pgsql_incdirs, pgsql_incdir)
  if test ! -r $pgsql_incdir/libpq-fe.h; then
    AC_MSG_ERROR(libpq-fe.h not found.  May need to use --with-pgsqldir option)
