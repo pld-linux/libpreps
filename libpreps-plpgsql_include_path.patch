@@ -5,7 +5,7 @@
  )
  
 -plpgsql_dirs="$ac_plpgsql_dir/lib /usr/lib/pgsql /usr/lib /usr/local/lib /opt/postgres/lib"
-+plpgsql_dirs="$ac_plpgsql_dir/lib /usr/lib/pgsql /usr/lib/pgsql/modules /usr/lib /usr/local/lib /opt/postgres/lib"
++plpgsql_dirs="$ac_plpgsql_dir/lib /usr/lib/pgsql /usr/lib/postgresql /usr/lib/pgsql/modules /usr/lib /usr/local/lib /opt/postgres/lib"
  AC_FIND_FILE(plpgsql.so, $plpgsql_dirs, plpgsql_dir)
  if test ! -r $plpgsql_dir/plpgsql.so; then
    AC_MSG_ERROR(plpgsql.so not found.  May need to use --with-plpgsqldir option)
