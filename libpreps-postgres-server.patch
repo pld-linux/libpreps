@@ -6,7 +6,7 @@ diff -uNr libpreps-1.6.5.orig/configure.in libpreps-1.6.5/configure.in
    AC_MSG_ERROR(libpq-fe.h not found.  May need to use --with-pgsqldir option)
  fi                                                                              
 -PG_CFLAGS="-I$pgsql_incdir"
-+PG_CFLAGS="-I$pgsql_incdir -I$pgsql_incdir/server"
++PG_CFLAGS="-I$pgsql_incdir -I$pgsql_incdir/postgresql/server"
  
  pgsql_libdirs="$ac_pgsql_dir/lib /usr/lib/pgsql /usr/lib /usr/local/lib /opt/postgres/lib"
  AC_FIND_FILE(libpq.so, $pgsql_libdirs, pgsql_libdir)
