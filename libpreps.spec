@@ -11,6 +11,7 @@ Patch1:		%{name}-nostatic.patch
 Patch2:		%{name}-plpgsql_include_path.patch
 Patch3:		%{name}-scripts_ac.patch
 Patch4:		%{name}-shell.patch
+Patch5:		%{name}-postgres-server.patch
 URL:		http://webpages.charter.net/stuffle/linux/preps/preps.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,6 +83,7 @@ Statyczna wersja biblioteki libPRepS.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
 rm -f missing
