@@ -88,7 +88,7 @@ rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
-automake -a -c -f
+automake -a -c -f --foreign
 %configure
 %{__make}
 
@@ -97,10 +97,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf AUTHORS ChangeLog COPYING INSTALL NEWS README
+gzip -9nf AUTHORS ChangeLog INSTALL NEWS README
 
 rm -f doc/html/Makefile*
-mv doc/html doc/programmer
+mv -f doc/html doc/programmer
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -119,11 +119,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/*.msg
 %{_mandir}/man1/*
 
-%files static
-%defattr(644,root,root,755)
-%{_libdir}/*.a
-
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/*
 %attr(755,root,root) %{_libdir}/*.la
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/*.a
