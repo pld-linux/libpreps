@@ -5,13 +5,6 @@ Version:	1.6.5
 Release:	1
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://webpages.charter.net/stuffle/linux/preps/%{name}-%{version}.tar.gz
 Patch0:		%{name}-postgresql_include_path.patch
 Patch1:		%{name}-nostatic.patch
@@ -60,13 +53,6 @@ przez serwer, jak i przez klientСw.
 Summary:        Header files for libPRepS
 Summary(pl):    Pliki nagЁСwkowe dla libPRepS
 Group:          Development/Libraries
-Group(de):      Entwicklung/Libraries
-Group(es):      Desarrollo/Bibliotecas
-Group(fr):      Development/Librairies
-Group(pl):      Programowanie/Biblioteki
-Group(pt_BR):   Desenvolvimento/Bibliotecas
-Group(ru):      Разработка/Библиотеки
-Group(uk):      Розробка/Б╕бл╕отеки
 Requires:       %{name} = %{version}
 
 %description devel
@@ -81,13 +67,6 @@ z biblioteki libPRepS, w szegСlno╤ci klienta/serwera PRepS.
 Summary:        Static library
 Summary(pl):    Biblioteka statyczna
 Group:          Development/Libraries
-Group(de):      Entwicklung/Libraries
-Group(es):      Desarrollo/Bibliotecas
-Group(fr):      Development/Librairies
-Group(pl):      Programowanie/Biblioteki
-Group(pt_BR):   Desenvolvimento/Bibliotecas
-Group(ru):      Разработка/Библиотеки
-Group(uk):      Розробка/Б╕бл╕отеки
 Requires:       %{name}-devel = %{version}
 
 %description static
