@@ -16,6 +16,7 @@ URL:		http://webpages.charter.net/stuffle/linux/preps/preps.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	libtool
 BuildRequires:	postgresql-backend-devel
 BuildRequires:	postgresql-devel >= 7.0
 BuildRequires:	postgresql-module-plpgsql
@@ -88,7 +89,7 @@ Statyczna wersja biblioteki libPRepS.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -99,8 +100,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf AUTHORS ChangeLog INSTALL NEWS README
-
 rm -f doc/html/Makefile*
 mv -f doc/html doc/programmer
 
@@ -109,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog INSTALL NEWS README
 %doc doc/C/prepsdb-admin-manual
 %doc doc/C/preps-FAQ
 %doc doc/programmer
