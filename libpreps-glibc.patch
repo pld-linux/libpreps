@@ -1,0 +1,38 @@
+--- libpreps-1.9.0/preps/sendmsg.c.orig	2002-01-30 01:40:02.000000000 +0100
++++ libpreps-1.9.0/preps/sendmsg.c	2004-04-06 23:19:27.907646056 +0200
+@@ -573,7 +573,7 @@
+  *-------------------------------------------------------------------------
+  */
+ static void
+-sendmsg( int         msg_type,
++preps_sendmsg( int         msg_type,
+          const text *email_list,
+          int4        pr_num,
+          const text *project,
+@@ -701,7 +701,7 @@
+                  const text *problem_type,
+                  const text *submitter )
+ {
+-   sendmsg( NEW_PR_MSG, email_list, INVALID_PR_NUM, project, pr_title, 
++   preps_sendmsg( NEW_PR_MSG, email_list, INVALID_PR_NUM, project, pr_title, 
+             descr, NULL, NULL, severity, problem_type, NULL, submitter );
+ 
+    return 0;
+@@ -721,7 +721,7 @@
+                  const text *responsible,
+                  const text *submitter )
+ {
+-   sendmsg( ASSIGN_MSG, email_list, INVALID_PR_NUM, NULL, pr_title, descr, 
++   preps_sendmsg( ASSIGN_MSG, email_list, INVALID_PR_NUM, NULL, pr_title, descr, 
+             fix_descr, status, severity, NULL, responsible, submitter );
+ 
+    return 0;
+@@ -741,7 +741,7 @@
+                  const text *responsible,
+                  const text *submitter )
+ {
+-   sendmsg( UPDATE_MSG, email_list, INVALID_PR_NUM, NULL, pr_title, descr, 
++   preps_sendmsg( UPDATE_MSG, email_list, INVALID_PR_NUM, NULL, pr_title, descr, 
+             fix_descr, status, severity, NULL, responsible, submitter );
+ 
+    return 0;
