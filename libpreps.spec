@@ -38,8 +38,8 @@ library that contains routines used by the server.
 %description -l pl
 PRepS s³u¿y do kontroli i zarz±dzania b³êdami. PRepS zosta³
 zaprojektowany do ma³ych i ¶rednich projektów. Mimo to jest na tyle
-elestyczny, ¿e mo¿e byæ u¿ywany przy innych rodzajach problemów
-wymagaj±cych kontroli postepu prac. Mo¿e byæ na przyk³ad u¿yty w domu
+elastyczny, ¿e mo¿e byæ u¿ywany przy innych rodzajach problemów
+wymagaj±cych kontroli postêpu prac. Mo¿e byæ na przyk³ad u¿yty w domu
 do nadzoru rzeczy wymagaj±cych naprawy.
 
 Pakiet libPRepS zawiera skrypty umo¿liwiaj±ce tworzenie i aktualizacjê
@@ -58,7 +58,7 @@ PRepS server.
 
 %description devel -l pl
 Pakiet ten jest niezbêdny podczas kompilacji programów korzystaj±cych
-z biblioteki libPRepS, w szególno¶ci serwera PRepS.
+z biblioteki libPRepS, w szczególno¶ci serwera PRepS.
 
 %package static
 Summary:	Static libPRepS library
