@@ -14,13 +14,13 @@ Patch4:		%{name}-shell.patch
 URL:		http://webpages.charter.net/stuffle/linux/preps/preps.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:  glib-devel >= 1.2.0
+BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	postgresql-backend-devel
 BuildRequires:	postgresql-devel >= 7.0
 BuildRequires:	postgresql-module-plpgsql
-BuildRequires:  tetex-dvips
+BuildRequires:	tetex-dvips
 # Requires:	postgresql-clients
-Requires:       postgresql-module-plpgsql >= 7.0
+Requires:	postgresql-module-plpgsql >= 7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,24 +50,24 @@ z interfejsem u¿ytkownika. Z tego powodu jest ona wymagana zarówno
 przez serwer, jak i przez klientów.
 
 %package devel
-Summary:        Header files for libPRepS
-Summary(pl):    Pliki nag³ówkowe dla libPRepS
-Group:          Development/Libraries
-Requires:       %{name} = %{version}
+Summary:	Header files for libPRepS
+Summary(pl):	Pliki nag³ówkowe dla libPRepS
+Group:		Development/Libraries
+Requires:	%{name} = %{version}
 
 %description devel
-This package is necessary to compile programs which use libPRepS,
-eg. PRepS client/server.
+This package is necessary to compile programs which use libPRepS, eg.
+PRepS client/server.
 
 %description devel -l pl
 Pakiet ten jest niezbêdny podczas kompilacji programów korzystaj±cych
 z biblioteki libPRepS, w szególno¶ci klienta/serwera PRepS.
 
 %package static
-Summary:        Static library
-Summary(pl):    Biblioteka statyczna
-Group:          Development/Libraries
-Requires:       %{name}-devel = %{version}
+Summary:	Static library
+Summary(pl):	Biblioteka statyczna
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}
 
 %description static
 libPRepS static version.
@@ -90,7 +90,7 @@ aclocal
 autoconf
 automake -a -c
 %configure
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz 
+%doc *.gz
 %doc doc/C/prepsdb-admin-manual
 %doc doc/C/preps-FAQ
 %doc doc/programmer
