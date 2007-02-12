@@ -1,5 +1,5 @@
 Summary:	libPRepS is the PRepS client/server library
-Summary(pl):	libPRepS to biblioteka dla klienta/serwera PRepS
+Summary(pl.UTF-8):   libPRepS to biblioteka dla klienta/serwera PRepS
 Name:		libpreps
 Version:	1.9.0
 Release:	2
@@ -35,20 +35,20 @@ The libPRepS package contains the server side scripts used to create
 and update PRepS databases. It also contains libpreps. libpreps is a
 library that contains routines used by the server.
 
-%description -l pl
-PRepS s³u¿y do kontroli i zarz±dzania b³êdami. PRepS zosta³
-zaprojektowany do ma³ych i ¶rednich projektów. Mimo to jest na tyle
-elastyczny, ¿e mo¿e byæ u¿ywany przy innych rodzajach problemów
-wymagaj±cych kontroli postêpu prac. Mo¿e byæ na przyk³ad u¿yty w domu
-do nadzoru rzeczy wymagaj±cych naprawy.
+%description -l pl.UTF-8
+PRepS sÅ‚uÅ¼y do kontroli i zarzÄ…dzania bÅ‚Ä™dami. PRepS zostaÅ‚
+zaprojektowany do maÅ‚ych i Å›rednich projektÃ³w. Mimo to jest na tyle
+elastyczny, Å¼e moÅ¼e byÄ‡ uÅ¼ywany przy innych rodzajach problemÃ³w
+wymagajÄ…cych kontroli postÄ™pu prac. MoÅ¼e byÄ‡ na przykÅ‚ad uÅ¼yty w domu
+do nadzoru rzeczy wymagajÄ…cych naprawy.
 
-Pakiet libPRepS zawiera skrypty umo¿liwiaj±ce tworzenie i aktualizacjê
-baz danych dla serwera. Zawiera te¿ bibliotekê libpreps, zawieraj±c±
+Pakiet libPRepS zawiera skrypty umoÅ¼liwiajÄ…ce tworzenie i aktualizacjÄ™
+baz danych dla serwera. Zawiera teÅ¼ bibliotekÄ™ libpreps, zawierajÄ…cÄ…
 procedury wykorzystywane przez serwer.
 
 %package devel
 Summary:	Header files for libPRepS
-Summary(pl):	Pliki nag³ówkowe dla libPRepS
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe dla libPRepS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -56,20 +56,20 @@ Requires:	%{name} = %{version}-%{release}
 This package is necessary to compile programs which use libPRepS, eg.
 PRepS server.
 
-%description devel -l pl
-Pakiet ten jest niezbêdny podczas kompilacji programów korzystaj±cych
-z biblioteki libPRepS, w szczególno¶ci serwera PRepS.
+%description devel -l pl.UTF-8
+Pakiet ten jest niezbÄ™dny podczas kompilacji programÃ³w korzystajÄ…cych
+z biblioteki libPRepS, w szczegÃ³lnoÅ›ci serwera PRepS.
 
 %package static
 Summary:	Static libPRepS library
-Summary(pl):	Biblioteka statyczna libPRepS
+Summary(pl.UTF-8):   Biblioteka statyczna libPRepS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of libPRepS library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki libPRepS.
 
 %prep
