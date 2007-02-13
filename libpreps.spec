@@ -1,5 +1,5 @@
 Summary:	libPRepS is the PRepS client/server library
-Summary(pl.UTF-8):   libPRepS to biblioteka dla klienta/serwera PRepS
+Summary(pl.UTF-8):	libPRepS to biblioteka dla klienta/serwera PRepS
 Name:		libpreps
 Version:	1.9.0
 Release:	2
@@ -48,7 +48,7 @@ procedury wykorzystywane przez serwer.
 
 %package devel
 Summary:	Header files for libPRepS
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libPRepS
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libPRepS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -62,7 +62,7 @@ z biblioteki libPRepS, w szczególności serwera PRepS.
 
 %package static
 Summary:	Static libPRepS library
-Summary(pl.UTF-8):   Biblioteka statyczna libPRepS
+Summary(pl.UTF-8):	Biblioteka statyczna libPRepS
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
